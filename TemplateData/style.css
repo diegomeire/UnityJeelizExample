@@ -42,9 +42,9 @@ html, body {
 
 @media only screen and (max-width: 500px) {
     #unity-container {
-        max-height: 100%;
+        max-height: 75%;
         width: auto;
-	    aspect-ratio: 16 / 9; /* Maintain the 16:9 aspect ratio */
+		aspect-ratio: 16 / 9; /* Maintain the 16:9 aspect ratio */
     }
 }
 
