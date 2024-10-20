@@ -35,6 +35,7 @@ html, body {
     max-height: 100vh; /* Ensure it doesn't exceed the viewport height */
     width: auto; /* The width will adjust based on the aspect ratio */
     display: flex;
+  flex-direction: column;
     justify-content: center;
     align-items: center;
 }
