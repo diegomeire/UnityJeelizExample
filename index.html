@@ -39,8 +39,15 @@
       </div>
       <div id="unity-warning"> </div>
     </div>
+	
+	
+	
     <script>
-		
+
+
+
+  	  // Call this function when the window is resized
+  	  window.addEventListener('resize', GetBrowserWindowSize);		
 
 		// SETTINGS of this demo:
 		const SETTINGS = {
@@ -54,6 +61,15 @@
 
 
   	  let instance = null;
+	  
+  	  function GetBrowserWindowSize() {
+  	    var width = window.innerWidth;
+  	    var height = window.innerHeight;
+  	    // Sending the dimensions back to Unity
+  	    if (instance != null) {
+  	      instance.SendMessage('FaceTracker', 'OnBrowserWindowSizeReceived', width + ',' + height);
+  	    }
+  	  }
 	  
 	  let ISDETECTED = false;
 
